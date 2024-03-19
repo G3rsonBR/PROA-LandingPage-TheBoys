@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Ubuntu', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+}
+
+html {
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 48px;
+}
+
+header .logo {
+  width: 150px;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation ul li a {
+  color: #fff;
+  font-size: 1.125rem;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: all .6s
+}
+
+.navigation ul li a:hover {
+  border-bottom: 2px solid #138ecc;
+}
+
+.navigation .search {
+  width: 1.375rem;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.navigation .user {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50em;
+  margin-top: 1.5em;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2.5em;
+}
+
+main section .logoTheBoys {
+  width: 30em;
+  margin-bottom: 2em;
+}
+
+main section .btn-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.btn-box .btn {
+  padding: 20px 45px;
+  background-color: #425265;
+  color: #fff;
+  margin-bottom: 2em;
+  border-bottom: 2px solid #fff;
+  transition: all .3s;
+}
+
+.btn-box .btn:hover {
+  background-color:#2d3846;
+}
+
+.btn-box .btn:focus {
+  background-color: #2d3846;
+}
+
+main section .text {
+  color: #fff;
+  line-height: 22px;
+}
+
+.btn-box2 {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #0f79af;
+  padding: 15px 45px;
+  margin-top: 1em;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid #fff;
+  font-size: 25px;
+  gap: 15px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.btn-box2:hover {
+  background-color: #138ecc;
+}
+
+.btn-box2 .play {
+  width: 1.4rem;
+  filter: invert(1);
+}
+
+.all {
+  display: flex;
+  align-items: flex-start;  
+  height: 100%;
+  padding-top: 12vh;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  right: 2rem;
+  bottom: 3rem;
+}
+
+footer .cards {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row;
+  /* padding: 0 10rem 2rem 0; */
+}
+
+footer .cards .card {
+  height: 160px;
+  max-width: 250px;
+  box-shadow: 12px 0 32px 2px #000;
+  margin-left: -120px;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+  overflow: hidden;
+}
+
+footer .cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+.cards .card:hover {
+  transform: translateY(-16px) rotate(3deg);
+}
+
+.cards .card:hover ~ .card {
+  transform: translateX(100px);
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background-position: 100% 0;
+  } 
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-attachment: fixed;
+    /* overflow: inherit; */
+  } 
+
+  .all {
+    display: block;
+  }
+
+  main section .logoTheBoys {
+    width: 20em;
+    margin-bottom: 1em;
+  }
+
+  .btn-box .btn {
+    padding: 10px 23px;
+  }
+
+  .btn-box2 {
+    padding: 10px 23px;
+  }
+
+  footer .cards {
+    justify-content: flex-start;
+    padding-left: 15rem;
+  }
+
+}
